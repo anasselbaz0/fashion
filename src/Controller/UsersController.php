@@ -104,4 +104,44 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+
+    public function login()
+    {
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->loadModel('Admins');
+                $alladmins = $this->Admins->find();
+                $admins_user_id = array();
+                foreach ($alladmins as $c) $admins_user_id[] = $c->users_id;
+                $this->loadModel('Clients');
+                $allclients = $this->Clients->find();
+                $clients_user_id = array();
+                foreach ($allclients as $c) $clients_user_id[] = $c->users_id;
+                $this->Auth->setUser($user);
+                switch ($this->request->data['role']) {
+                    case 'admin': {
+                        if (in_array($this->Auth->user('id'), $admins_user_id)) {
+                            return $this->redirect(
+                                ['controller' => 'Admins', 'action' => 'index']
+                            );
+                        }
+                        break;
+                    }
+                    case 'client': {
+                        if (in_array($this->Auth->user('id'), $clients_user_id)) {
+                            return $this->redirect(
+                                ['controller' => 'Clients', 'action' => 'index']
+                            );
+                        }
+                        break;
+                    }
+                }
+            } else {
+                $this->Flash->error(__('Username or password is incorrect'));
+            }
+        }
+    }
+
 }

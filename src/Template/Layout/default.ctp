@@ -268,7 +268,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
         <!-- Logo -->
         <div class="sidebar_logo">
-            <a href="#"><div>a<span>star</span></div></a>
+            <?php
+            echo $this->Html->image("logo2.png", [
+                "alt" => "Fashion Shifter",
+                'url' => ['controller' => 'Pages', 'action' => 'index'],
+                "width" => "220"
+            ]);
+            ?>
         </div>
 
         <!-- Sidebar Navigation -->
