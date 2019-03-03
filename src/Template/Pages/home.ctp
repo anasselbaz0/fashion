@@ -69,7 +69,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     <li><a href="#">woman</a></li>
                     <li><a href="#">man</a></li>
                     <li><a href="#">lookbook</a></li>
-                    <li><a href="#">blog</a></li>
+                    <li><?php $this->Html->link("BLOG", ['controller'=>'posts','action'=>'index']) ?></li>
                     <li><a href="#">contact</a></li>
                 </ul>
             </nav>
@@ -279,7 +279,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 <li><a href="#">woman<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                 <li><a href="#">man<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                 <li><a href="#">lookbook<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                <li><a href="blog.html">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="posts/">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                 <li><a href="#">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
