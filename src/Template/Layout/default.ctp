@@ -192,12 +192,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
         <nav class="menu_nav">
             <ul class="menu_mm">
-                <li class="menu_mm"><a href="index.html">home</a></li>
-                <li class="menu_mm"><a href="#">woman</a></li>
-                <li class="menu_mm"><a href="#">man</a></li>
-                <li class="menu_mm"><a href="#">lookbook</a></li>
-                <li class="menu_mm"><a href="blog.html">blog</a></li>
-                <li class="menu_mm"><a href="contact.html">contact</a></li>
+                <li class="menu_mm"><?= $this->Html->link('Login', '/users/login') ?></li>
+                <li class="menu_mm"><?= $this->Html->link('Home', '/') ?></li>
+                <li class="menu_mm"><?= $this->Html->link('Buy', '/pieces/buy') ?></li>
+                <li class="menu_mm"><?= $this->Html->link('Sell', '/pages/sell') ?></li>
+                <li class="menu_mm"><?= $this->Html->link('Remake', '/pages/remake') ?></li>
             </ul>
         </nav>
         <div class="menu_extra">
@@ -280,12 +279,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <!-- Sidebar Navigation -->
         <nav class="sidebar_nav">
             <ul>
-                <li><a href="index.html">home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                <li><a href="#">woman<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                <li><a href="#">man<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                <li><a href="#">lookbook<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                <li><a href="blog.html">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                <li><a href="#">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="http://localhost/fashion/users/login">login<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="http://localhost/fashion/">home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="http://localhost/fashion/pieces/buy">buy<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="http://localhost/fashion/pieces/sell">sell<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="http://localhost/fashion/pieces/remake">remake<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="http://localhost/fashion/pages/aboutus">about us<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
 
@@ -317,95 +316,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <div class="section_container">
                 <div class="container">
                     <div class="row">
-                        
-                        <!-- About -->
-                        <div class="col-xxl-3 col-md-6 footer_col">
-                            <div class="footer_about">
-                                <!-- Logo -->
-                                <div class="footer_logo">
-                                    <a href="#"><div>a<span>star</span></div></a>
-                                </div>
-                                <div class="footer_about_text">
-                                    <p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam fringilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
-                                </div>
-                                <div class="cards">
-                                    <ul class="d-flex flex-row align-items-center justify-content-start">
-                                        <li><a href="#"><img src="<?= $this->request->base ?>/images/card_1.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="<?= $this->request->base ?>/images/card_2.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="<?= $this->request->base ?>/images/card_3.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="<?= $this->request->base ?>/images/card_4.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="<?= $this->request->base ?>/images/card_5.jpg" alt=""></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Questions -->
-                        <div class="col-xxl-3 col-md-6 footer_col">
-                            <div class="footer_questions">
-                                <div class="footer_title">questions</div>
-                                <div class="footer_list">
-                                    <ul>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Track Orders</a></li>
-                                        <li><a href="#">Returns</a></li>
-                                        <li><a href="#">Jobs</a></li>
-                                        <li><a href="#">Shipping</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Partners</a></li>
-                                        <li><a href="#">Bloggers</a></li>
-                                        <li><a href="#">Support</a></li>
-                                        <li><a href="#">Terms of Use</a></li>
-                                        <li><a href="#">Press</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Blog -->
-                        <div class="col-xxl-3 col-md-6 footer_col">
-                            <div class="footer_blog">
-                                <div class="footer_title">blog</div>
-                                <div class="footer_blog_container">
-
-                                    <!-- Blog Item -->
-                                    <div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-                                        <div class="footer_blog_image"><a href="blog.html"><img src="<?= $this->request->base ?>/images/footer_blog_1.jpg" alt=""></a></div>
-                                        <div class="footer_blog_content">
-                                            <div class="footer_blog_title"><a href="blog.html">what shoes to wear</a></div>
-                                            <div class="footer_blog_date">june 06, 2018</div>
-                                            <div class="footer_blog_link"><a href="blog.html">Read More</a></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Blog Item -->
-                                    <div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-                                        <div class="footer_blog_image"><a href="blog.html"><img src="<?= $this->request->base ?>/images/footer_blog_2.jpg" alt=""></a></div>
-                                        <div class="footer_blog_content">
-                                            <div class="footer_blog_title"><a href="blog.html">trends this year</a></div>
-                                            <div class="footer_blog_date">june 06, 2018</div>
-                                            <div class="footer_blog_link"><a href="blog.html">Read More</a></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Contact -->
-                        <div class="col-xxl-3 col-md-6 footer_col">
-                            <div class="footer_contact">
-                                <div class="footer_title">contact</div>
-                                <div class="footer_contact_list">
-                                    <ul>
-                                        <li class="d-flex flex-row align-items-start justify-content-start"><span>C.</span><div>Your Company Ltd</div></li>
-                                        <li class="d-flex flex-row align-items-start justify-content-start"><span>A.</span><div>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68</div></li>
-                                        <li class="d-flex flex-row align-items-start justify-content-start"><span>T.</span><div>+53 345 7953 32453</div></li>
-                                        <li class="d-flex flex-row align-items-start justify-content-start"><span>E.</span><div>office@youremail.com</div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <p>
+                            Made by : <br>
+                            <em><b>ELBAZ Anass</b></em><br>
+                             & <br>
+                            <em><b>BEAILA Younes</b></em><br>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -510,3 +426,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="<?= $this->request->base ?>/js/blog.js"></script>
 </body>
 </html>
+
+<style type="text/css">
+    input, select {
+        height: 30px;
+        width: 100%;
+        background-color: #fcfcfd;
+        border-radius: 1px;
+        border: solid 1px #bbe432;
+        margin: 5px;
+        padding: 5px;
+    }
+
+</style>

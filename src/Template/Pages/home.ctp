@@ -120,6 +120,12 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
                 </div>
 
+                <div>
+                    <li>
+                        <?= $this->Html->link('LOGIN', ['controller'=>'users','action'=>'login']) ?>
+                    </li>
+                </div>
+
                 <!-- Cart -->
                 <div class="cart d-flex flex-row align-items-center justify-content-start">
                     <div class="cart_icon"><a href="cart.html">

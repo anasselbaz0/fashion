@@ -20,6 +20,7 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('price') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('categories_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -30,6 +31,7 @@
                 <td><?= $this->Number->format($piece->id) ?></td>
                 <td><?= h($piece->created) ?></td>
                 <td><?= $this->Number->format($piece->price) ?></td>
+                <td><?= h($piece->photo) ?></td>
                 <td><?= $piece->has('category') ? $this->Html->link($piece->category->id, ['controller' => 'Categories', 'action' => 'view', $piece->category->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $piece->id]) ?>

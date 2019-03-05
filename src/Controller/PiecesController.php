@@ -109,4 +109,13 @@ class PiecesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function buy()
+    {
+        $this->loadModel('Pieces');
+        $pieces = $this->Pieces->find();
+        $this->set(compact('pieces'));
+    }
+
+
 }

@@ -9,6 +9,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property \Cake\I18n\FrozenTime|null $created
  * @property float $price
+ * @property string|null $photo
  * @property int $categories_id
  *
  * @property \App\Model\Entity\Category $category
@@ -28,6 +29,7 @@ class Piece extends Entity
     protected $_accessible = [
         'created' => true,
         'price' => true,
+        'photo' => true,
         'categories_id' => true,
         'category' => true
     ];

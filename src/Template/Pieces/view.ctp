@@ -19,6 +19,10 @@
     <h3><?= h($piece->id) ?></h3>
     <table class="vertical-table">
         <tr>
+            <th scope="row"><?= __('Photo') ?></th>
+            <td><?= h($piece->photo) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Category') ?></th>
             <td><?= $piece->has('category') ? $this->Html->link($piece->category->id, ['controller' => 'Categories', 'action' => 'view', $piece->category->id]) : '' ?></td>
         </tr>
