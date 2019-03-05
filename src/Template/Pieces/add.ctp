@@ -18,6 +18,7 @@
         <legend><?= __('Add Piece') ?></legend>
         <?php
             echo $this->Form->control('price');
+            echo $this->Form->control('photo');
             echo $this->Form->control('categories_id', ['options' => $categories]);
         ?>
     </fieldset>

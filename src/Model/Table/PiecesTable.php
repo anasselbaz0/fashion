@@ -64,6 +64,11 @@ class PiecesTable extends Table
             ->requirePresence('price', 'create')
             ->allowEmptyString('price', false);
 
+        $validator
+            ->scalar('photo')
+            ->maxLength('photo', 400)
+            ->allowEmptyString('photo');
+
         return $validator;
     }
 
